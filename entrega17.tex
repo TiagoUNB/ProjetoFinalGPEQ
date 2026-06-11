@@ -1,0 +1,395 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── Pacotes ─────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% ── Geometria da página ──────────────────────────────────────
+\geometry{
+  top    = 3cm,
+  bottom = 2cm,
+  left   = 3cm,
+  right  = 2cm
+}
+
+% ── Espaçamento ──────────────────────────────────────────────
+\onehalfspacing
+
+% ── Formatação de seções ─────────────────────────────────────
+\titleformat{\section}[block]
+  {\normalfont\large\bfseries\uppercase{#1}}
+  {\thesection.}{0.5em}{}
+
+\titleformat{\subsection}[block]
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection.}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{1.5ex plus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1ex plus .2ex}{0.5ex plus .2ex}
+
+% ── Hiperlinks ───────────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = black,
+  urlcolor   = blue,
+  citecolor  = black
+}
+
+% ── Cabeçalho / rodapé ───────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Gestão da Produção e Qualidade}
+\lhead{\small GPeQ – Grupo XX}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ============================================================
+\begin{document}
+
+% ── CAPA ────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+
+  {\large \textbf{UNIVERSIDADE DE BRASÍLIA}}\\[0.3cm]
+  {\large Faculdade do Gama – FGA}\\[2cm]
+
+  {\Large \textbf{GESTÃO DA PRODUÇÃO E QUALIDADE}}\\[0.5cm]
+  {\large Turma: 14h00}\\[0.3cm]
+  {\large Professora: Rejane Figueiredo}\\[2cm]
+
+  {\LARGE \textbf{TEMA:}}\\[0.5cm]
+  % ↓ Preencha o tema do trabalho
+  {\Large \textit{[Visita Tecnica no Restaurante e Bar Tarumã]}}\\[2cm]
+
+  {\large \textbf{Grupo 03}}\\[1cm]
+
+  % ── Tabela de integrantes ──────────────────────────────────
+  \begin{tabular}{cl}
+    \toprule
+    \textbf{Matrícula} & \textbf{Nome} \\
+    \midrule
+    241025390 & Tiago Geovane da Silva Sousa \\
+    242028691 & Henrique Mendes Elias \\
+    242004742 & João Guilherme Amancio de Melo \\
+    242015488 & Gabriel Portácio Candeia Costa \\
+    232021516 & Guilherme Gusmão Nepomuceno \\
+    242024478 & Matheus Rodrigues Pontes \\
+    \bottomrule
+  \end{tabular}\\[2cm]
+
+  {\large Brasília, \today}
+
+\end{titlepage}
+
+% ── Sumário ──────────────────────────────────────────────────
+\tableofcontents
+\newpage
+
+% ============================================================
+% 1. INTRODUÇÃO
+% ============================================================
+\section{Introdução}
+
+%
+% Descreva o "case": como a empresa/produto se insere no mercado,
+% concorrentes, fornecedores e parceiros.
+%
+% Ferramentas utilizadas para gerenciamento do projeto GPeQ,
+% da equipe e do tempo (ex.: Teams com Kanban, MS Project,
+% Gantt, Trello etc.).
+%
+% Apresente o planejado (com prints de controle ao longo do
+% trabalho) e o resultado final.
+%
+
+
+
+% ============================================================
+% 2. ESPECIFICAÇÕES DE ENTRADA
+% ============================================================
+\section{Especificações de Entrada}
+
+\subsection{Recursos Transformadores}
+
+\subsubsection*{Funcionários}
+
+No processo de produção e entrega do prato, desde a captação do pedido até o serviço na mesa, os recursos humanos atuam diretamente na prestação do serviço e na manipulação das matérias-primas. Os principais funcionários envolvidos são:
+
+\begin{itemize}
+    \item \textbf{Garçom / Atendente:} Responsável pela interface direta com o cliente. Ele capta o pedido, esclarece dúvidas sobre o prato, insere os dados no sistema para envio à cozinha e, ao final do processo, entrega o prato finalizado na mesa.
+    \item \textbf{Auxiliar de Cozinha:} Encarregado do pré-preparo (\textit{mise en place}). Realiza atividades como higienizar, descascar e cortar as batatas, separar as porções de carne, preparar as estações de empanamento e auxiliar na limpeza do ambiente.
+    \item \textbf{Cozinheiro:} Profissional responsável pela transformação térmica e química dos ingredientes. Ele tempera e empana o bife, realiza a fritura da carne e das batatas, cozinha o arroz, prepara o molho de tomate e faz a montagem das camadas (carne, molho, queijo).
+    \item \textbf{Expedidor ou Chefe de Cozinha (dependendo do porte do restaurante):} Responsável por fazer o controle de qualidade visual e de temperatura antes de liberar o prato pronto da cozinha para o garçom.
+\end{itemize}
+
+\subsubsection*{Máquinas e Equipamentos}
+
+As instalações, máquinas e equipamentos formam a infraestrutura tecnológica e física necessária para que os funcionários executem o trabalho. A lista inclui desde a área de tecnologia até o maquinário pesado da cozinha:
+
+\begin{itemize}
+    \item \textbf{Sistema de PDV (Ponto de Venda) e Impressora/Monitor de Pedidos:} Hardware e software utilizados pelo garçom para registrar o pedido e transmiti-lo instantaneamente para a cozinha, iniciando o fluxo de produção.
+    \item \textbf{Refrigeradores e Freezers Industriais:} Equipamentos que mantêm a matéria-prima (carnes, queijos, presunto) em temperatura segura até o momento do uso.
+    \item \textbf{Bancadas de Aço Inox e Tábuas de Corte:} Superfícies padronizadas para manipulação segura e higiênica dos alimentos durante o \textit{mise en place}.
+    \item \textbf{Fritadeira Industrial (Elétrica ou a Gás):} Equipamento crítico do processo, utilizado para fritar os bifes empanados e as batatas por imersão, garantindo rapidez e crocância com temperatura controlada.
+    \item \textbf{Fogão Industrial:} Utilizado para o cozimento do arroz e para a cocção e redução do molho de tomate.
+    \item \textbf{Forno Industrial ou Salamandra:} Equipamento de finalização utilizado exclusivamente para derreter o queijo e gratinar o prato de forma rápida e uniforme antes de ser servido.
+    \item \textbf{Utensílios de Cozinha Gerais:} Panelas, escumadeiras, facas, pinças e cubas gastronômicas essenciais para o manuseio dos alimentos ao longo de todas as etapas.
+\end{itemize}
+
+\subsection{Recursos Transformados}
+No processo de preparação do prato de parmegiana de carne, que consiste em arroz cozido, batatas fritas e o bife de carne à parmegiana, os recursos transformados consistem nos ingredientes do prato, que são os seguintes:
+
+\begin{itemize}
+    \item \textbf{Para o bife à parmegiana:} 
+    \begin{itemize}
+        \item Bifes de carne bovina;
+        \item Temperos (sal, pimenta-do-reino e alho);
+        \item Ingredientes para empanar (farinha de trigo, ovos batidos e farinha de rosca);
+        \item Óleo (para a fritura);
+        \item Molho de tomate;
+    \end{itemize}
+    
+    \item \textbf{Para o arroz:}
+    \begin{itemize}
+        \item Arroz branco (agulhinha);
+        \item Óleo ou azeite;
+        \item Alho e cebola picados;
+        \item Sal;
+        \item Água.
+    \end{itemize}
+    
+    \item \textbf{Para as batatas fritas:}
+    \begin{itemize}
+        \item Batatas;
+        \item Óleo (para a fritura);
+        \item Sal.
+    \end{itemize}
+\end{itemize}
+
+
+% ============================================================
+% 3. ESTRATÉGIA DA PRODUÇÃO
+% ============================================================
+\section{Estratégia da Produção}
+
+%
+% Base teórica: capítulos do livro-base.
+%
+% Como estão definidos os objetivos de desempenho:
+% qualidade, velocidade, flexibilidade, confiabilidade e/ou custo?
+%
+
+
+
+% ============================================================
+% 4. CAP 4 – INOVAÇÃO DE PRODUTO E SERVIÇO
+% ============================================================
+\section{Cap.~4 – Inovação de Produto e Serviço}
+
+
+
+% ============================================================
+% 5. CAP 5 – ESTRUTURA E ESCOPO DA PRODUÇÃO
+% ============================================================
+\section{Cap.~5 – Estrutura e Escopo da Produção}
+
+
+
+% ============================================================
+% 6. CAP 6 – PROJETO DE PROCESSOS
+% ============================================================
+\section{Cap.~6 – Projeto de Processos}
+
+
+
+% ============================================================
+% 7. CAP 7 – ARRANJO FÍSICO E FLUXO
+% ============================================================
+\section{Cap.~7 – Arranjo Físico e Fluxo}
+
+
+
+% ============================================================
+% 8. CAP 8 – TECNOLOGIA DE PROCESSO
+% ============================================================
+\section{Cap.~8 – Tecnologia de Processo}
+
+A tecnologia de processo no Restaurante Tarumã caracteriza-se por um forte contraste entre a produção física (que é essencialmente artesanal) e o processamento de informações (que é amparado por sistemas de gestão interligados).
+
+No que tange à transformação física dos materiais, o gerente informou que o processo da cozinha é \textbf{100\% manual}. O restaurante opta por não utilizar automação pesada na cocção, garantindo assim um nível de personalização avaliado em "10 de 10" para o cliente. As tecnologias físicas limitam-se aos equipamentos padrão de uma cozinha industrial.
+
+Por outro lado, no processamento de informações e interação com o cliente, a tecnologia desempenha um papel central e estratégico:
+\begin{itemize}
+    \item \textbf{Integração de Pedidos e Delivery:} Há uma integração robusta das plataformas de venda \textit{on-line} (como o iFood) com o sistema de comandas da cozinha. Isso permite que a ordem chegue de forma instantânea e clara à linha de produção, contribuindo diretamente para o rigoroso tempo de ciclo da operação (8 minutos de preparo e, no máximo, 2 minutos para o cliente ser atendido no salão).
+    \item \textbf{Interação e Avaliação:} A utilização de um \textbf{tablet de avaliação do estabelecimento} atua como uma tecnologia de monitoramento da qualidade percebida pelo cliente, permitindo a coleta de dados e \textit{feedbacks} em tempo real.
+    \item \textbf{Gestão Financeira e de Estoque:} O restaurante conta com uma empresa de contabilidade parceira que utiliza sistemas de informação para analisar entradas, saídas e fluxo de caixa. Essa tecnologia analítica é vital para o controle de compras (que ocorre semanalmente) e garante que o Custo das Mercadorias Vendidas (CMV) não ultrapasse o teto estabelecido de 40\% sobre a venda, evitando que a empresa opere com margens negativas.
+\end{itemize}
+
+% ============================================================
+% 9. CAP 9 – PESSOAS NA PRODUÇÃO
+% ============================================================
+\section{Cap.~9 – Pessoas na Produção}
+
+A gestão de pessoas e o projeto do trabalho são fundamentais para o Restaurante Tarumã, especialmente considerando a natureza manual de sua cozinha e o alto grau de personalização exigido pelos consumidores (que dispõem de um cardápio de 20 pratos principais e cerca de 50 pratos diários no total).
+
+\begin{itemize}
+    \item \textbf{Divisão do Trabalho e Projeto de Tarefas:} O restaurante conta com uma equipe robusta de \textbf{18 funcionários na cozinha, que são divididos estrategicamente em 9 praças} (estações de trabalho). Essa organização celular permite que as tarefas sejam altamente especializadas. Além disso, há procedimentos operacionais bem definidos que guiam o trabalho humano: as proteínas são estritamente ``gramatizadas'' (pesadas em porções exatas) para padronizar custos, enquanto outros insumos são refogados no alho.
+    \item \textbf{Gestão de Escalas e Capacidade:} O estabelecimento possui um horário de funcionamento extenso, abrindo às 11h e se estendendo até o horário de \textit{happy hour} e jantar. Como o maior pico de clientes se concentra entre \textbf{12h e 14h}, a gestão de escalas é vital. É necessário garantir a força de trabalho máxima nesse período crítico para absorver a demanda do salão e do delivery, evitando a exaustão física dos colaboradores e mantendo a qualidade do atendimento.
+    \item \textbf{Habilidades e Sincronia de Equipe:} Para que um prato complexo como a parmegiana seja produzido em apenas 8 minutos, a equipe necessita de alto nível de destreza e sincronia. O trabalho de preparo prévio (\textit{mise en place}) é essencial; a equipe adianta as etapas mais demoradas do processo (como o preparo do molho), permitindo que a finalização atenda à promessa de rapidez exigida pelo cliente.
+\end{itemize}
+
+
+
+% ============================================================
+% 10. CAP 10 – PLANEJAMENTO E CONTROLE
+% ============================================================
+\section{Cap.10 – Planejamento e Controle}
+
+O planejamento e controle consistem na conciliação contínua entre as demandas do mercado e a habilidade dos recursos da operação para entregá-las. No caso prático em análise, essa dinâmica fica evidente no desafio de equilibrar um alto volume de produção mensal (1.500 parmegianas) com uma considerável variedade de cardápio (20 pratos com alta flexibilidade de personalização). Essa matriz específica de volume e variedade afeta diretamente o horizonte de planejamento e o rigor do controle operacional, exigindo decisões de sequenciamento detalhadas em uma cozinha de processos puramente manuais, cuja capacidade depende totalmente de um carregamento preciso na programação dos padrões de trabalho de seus 18 funcionários em dois turnos.
+
+Para otimizar o tempo de espera do cliente, a operação busca melhorar sua razão P:D, que compara o tempo de atravessamento produtivo (P) com o tempo de demanda ou espera do cliente (D). O restaurante reduz seu tempo interno ao manter proteínas com gramatura pré-porcionada, aproximando-se de uma operação de "criação parcial e entrega sob encomenda" que permite despachar o prato principal em cerca de 10 minutos. Ademais, por estar sujeito à demanda independente — na qual as requisições dos clientes são aleatórias e sem visibilidade antecipada firme —, o restaurante foca seu controle de suprimentos em estoques semanais ajustados por relatórios de parceiros, tomando decisões preventivas para evitar faltas ou excessos de insumos.
+
+Por fim, para gerenciar as flutuações, especialmente nos horários de pico (12h às 14h), a operação adota intervenções focadas no fluxo de clientes. A política de reserva de mesa atua como uma estratégia de carregamento finito, estipulando um limite para não sobrecarregar a capacidade produtiva da cozinha.
+
+
+
+% ============================================================
+% 11. CAP 11 – GESTÃO DA CAPACIDADE FÍSICA  *opcional
+% ============================================================
+\section{Cap.~11 – Gestão da Capacidade Física \textnormal{\small (opcional)}}
+
+
+
+% ============================================================
+% 12. CAP 12 – GESTÃO DA CADEIA DE SUPRIMENTO  *opcional
+% ============================================================
+\section{Cap.~12 – Gestão da Cadeia de Suprimento \textnormal{\small (opcional)}}
+
+
+
+% ============================================================
+% 13. CAP 13 – GESTÃO DE ESTOQUE
+% ============================================================
+\section{Cap.13 – Gestão de Estoque}
+O capítulo aborda o dilema clássico da gestão de estoque: equilibrar os custos de manter materiais armazenados — que imobilizam capital de giro e impõem riscos de perda ou obsolescência — com a necessidade de conciliar suprimento e demanda. No contexto prático do restaurante, esse desafio é administrado por meio de uma revisão semanal do estoque de produtos. Essa periodicidade ajuda a minimizar o capital de giro empatado e os custos de estocagem física, ao mesmo tempo em que o estoque atua como reserva de segurança  contra as flutuações imprevisíveis da demanda nos horários de pico.
+
+As principais decisões operacionais envolvem definir quanto pedir (decisão de volume) e quando pedir (decisão de timing), buscando minimizar o esforço e os custos totais de reabastecimento. Para lidar com essa complexidade de forma eficiente, o restaurante adota uma estratégia de controle terceirizado, trabalhando em conjunto com uma empresa parceira externa especializada. Essa empresa processa as informações operacionais e emite relatórios analíticos regulares que indicam precisamente o que deve ou não ser adquirido em cada ciclo, atuando na prática como o sistema de informação de estoque da operação para guiar as decisões de ressuprimento.
+
+Por fim, o monitoramento contínuo é essencial para garantir o retorno financeiro e evitar perdas por deterioração, um risco crítico no setor de alimentos. A dinâmica com a empresa parceira fornece um mecanismo de intervenção direta: ela oferece feedback sobre o ganho real da operação e sobre a precificação dos fornecedores, indicando as opções mais competitivas do mercado. Além disso, regula o fluxo de entrada de insumos — sinalizando a interrupção de compras diante de acúmulos excessivos ou orientando adequação quando os níveis estão abaixo do necessário. Esse controle assegura estoques dimensionados de forma adequada, otimizando os custos globais de pedido e manutenção sem comprometer a capacidade do restaurante de entregar seus pratos.
+
+
+
+% ============================================================
+% 14. CAP 16 – MELHORAMENTO DA PRODUÇÃO
+% ============================================================
+\section{Cap. 16 – Melhoramento da Produção}
+O capítulo trata do melhoramento da produção como uma responsabilidade central da gestão de operações, estruturada em elementos, abordagens, técnicas e gestão do processo de melhoria. No restaurante, esse ciclo de melhoramento se manifesta de forma contínua e incremental — caracterizando uma filosofia próxima ao kaizen —, especialmente no processo de desenvolvimento de novos pratos. A introdução de um item ao cardápio passa por uma reunião estruturada entre proprietários, gerentes, cozinheiros e o chef, onde a melhor ideia é selecionada coletivamente. A transição do papel para a prática é liderada pela própria cozinha, o que reforça o elemento de "inclusão de todos" e o desenvolvimento de relacionamentos internos entre as partes da operação.
+
+A coleta e o uso de evidências também compõem o esforço de melhoramento do restaurante, alinhando-se ao elemento de solução de problemas baseada em evidência. O feedback dos clientes é obtido por dois canais — Google e tablets no próprio estabelecimento —, funcionando como instrumentos de monitoramento contínuo que permitem detectar desvios de qualidade e orientar intervenções rápidas no processo. Esse mecanismo aproxima a operação de um ciclo PDCA informal, no qual os resultados percebidos pelos clientes retroalimentam as decisões operacionais da equipe.
+
+Por fim, a gestão do melhoramento exige organização e vinculação à estratégia da operação. A adoção da gramatura pré-porcionada para proteínas exemplifica um melhoramento incremental que reduziu o tempo de confecção do prato principal para aproximadamente 10 minutos, impactando diretamente a experiência do cliente. Esse tipo de melhoria localizada, simples e de baixo custo, ilustra como técnicas analíticas relativamente simples — como a padronização de etapas do processo — podem gerar ganhos expressivos de desempenho sem a necessidade de mudanças radicais ou de ruptura.
+
+
+
+% ============================================================
+% 15. PROPOSTA DE MELHORIA (DO GRUPO)
+% ============================================================
+\section{Proposta de Melhoria}
+
+%
+% Escolha pelo menos um tópico para propor melhorias
+% embasadas na teoria.
+% Atenção: evite propostas superficiais; fundamente-se
+% na literatura para propor a melhoria.
+%
+
+
+
+% ============================================================
+% 16. CONSIDERAÇÕES FINAIS
+% ============================================================
+\section{Considerações Finais}
+
+%
+% Relato da jornada do grupo:
+% pontos interessantes, dificuldades e conquistas.
+%
+
+
+
+% ============================================================
+% REFERÊNCIAS
+% ============================================================
+\newpage
+\section*{Referências}
+\addcontentsline{toc}{section}{Referências}
+
+\begin{description}[leftmargin=0pt, labelwidth=0pt, itemsep=6pt]
+
+  \item SLACK, Nigel; CHAMBERS, Stuart; JOHNSTON, Robert.
+    \textit{Administração de produção.} 8.~ed. São Paulo: Atlas.
+
+  \item KRAJEWSKI, Lee~J.; RITZMAN, Larry~P.; MALHOTRA, Manoj~K.
+    \textit{Administração de produção e operações.} 8.~ed.
+    São Paulo: Pearson, 2012. 615~p.
+    ISBN~9788576051725.
+
+  \item SLACK, Nigel; CHAMBERS, Stuart; JOHNSTON, Robert.
+    \textit{Administração de produção.} 3.~ed.
+    São Paulo: Atlas, 2009. 703~p.
+    ISBN~9788522453535.
+
+  \item GIRI, Sunita.
+    \textit{Operations Research and Quality Management.}
+    ABD Publishers, 2010.
+    Disponível em: \url{http://site.ebrary.com/lib/univbrasilia/docDetail.action?docID=10416308}.
+
+\end{description}
+
+\subsection*{Bibliografia Complementar}
+
+\begin{description}[leftmargin=0pt, labelwidth=0pt, itemsep=6pt]
+
+  \item ANTUNES, Junico.
+    \textit{Sistemas de produção: conceitos e práticas para projeto e gestão da produção enxuta.}
+    Porto Alegre: Bookman, 2008. 326~p.
+    ISBN~9788577801169.
+
+  \item BALLESTERO-ALVAREZ, María Esmeralda.
+    \textit{Gestão de qualidade: produção e operações.}
+    2.~ed. São Paulo: Atlas, 2012. 460~p.
+    ISBN~9788522471058.
+
+  \item BATALHA, Mário Otávio (Org.).
+    \textit{Introdução à engenharia de produção.}
+    Rio de Janeiro: Elsevier, 2008. 312~p.
+    ISBN~9788535223304.
+
+  \item DE~SORDI, José Osvaldo.
+    \textit{Gestão por processos: uma abordagem da moderna administração.}
+    3.~ed. São Paulo: Saraiva, 2012. 338~p.
+    ISBN~9788502175518.
+
+  \item FERREIRA, Ayrton Sérgio Rochedo.
+    \textit{Modelagem organizacional por processos.}
+    Rio de Janeiro: Mauad X, 2010. 270~p.
+    ISBN~9788574783239.
+
+\end{description}
+
+\end{document}
