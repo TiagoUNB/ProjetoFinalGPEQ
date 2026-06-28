@@ -32,9 +32,9 @@
 
 % ── Formatação de seções ─────────────────────────────────────
 \titleformat{\section}[block]
-  {\normalfont\large\bfseries\uppercase{#1}}
+  {\normalfont\large\bfseries\MakeUppercase} 
   {\thesection.}{0.5em}{}
-
+  
 \titleformat{\subsection}[block]
   {\normalfont\normalsize\bfseries}
   {\thesubsection.}{0.5em}{}
@@ -222,56 +222,146 @@ Quanto ao escopo da produção, o restaurante adota uma estratégia inteligente 
 % ============================================================
 \section{Cap.~6 – Projeto de Processos}
 
+A operação do Restaurante Tarumã demonstra um sistema de produção híbrido, uma estratégia altamente eficiente e comum no setor de alimentação, que visa equilibrar a rapidez no atendimento com a personalização do prato.
+
+\begin{itemize}
+    \item \textbf{Produção em Lotes (\textit{Batch}):} A fase de pré-preparo (\textit{mise en place}) ocorre sob a lógica de produção em lotes. O uso de grandes caldeirões e as áreas contínuas de fritura indicam que as bases dos pratos e o processamento de insumos ocorrem em grandes quantidades. Essa etapa otimiza o tempo da equipe e maximiza o aproveitamento de recursos materiais (como gás e energia).
+    \item \textbf{Produção sob Encomenda (\textit{Make-to-order}):} Em contrapartida, a montagem e a finalização do prato seguem um fluxo puxado pelo cliente. O produto só é efetivamente finalizado e montado a partir do momento em que o pedido entra na cozinha, garantindo frescor e permitindo alto grau de personalização.
+    \item \textbf{Gargalo e Controle de Qualidade:} O \textit{passa-pratos} atua como o ponto de transição crítico do processo produtivo. Ele é a etapa final do fluxo interno e funciona tanto como um regulador do ritmo da cozinha (potencial gargalo) quanto como a última barreira de controle de qualidade antes da entrega do produto ao salão.
+\end{itemize}
+
 % ============================================================
 % 7. CAP 7 – ARRANJO FÍSICO E FLUXO
 % ============================================================
 \section{Cap.~7 – Arranjo Físico e Fluxo}
+
+O arranjo físico (layout) do estabelecimento foi projetado estrategicamente para organizar a movimentação de recursos transformados e transformadores, minimizando cruzamentos indesejados e otimizando o espaço disponível.
+
+\begin{itemize}
+    \item \textbf{Layout Linear da Cozinha:} O ambiente de produção possui um formato retangular e estreito. Os equipamentos ficam distribuídos ao longo das paredes laterais, deixando um corredor central livre. Isso cria um fluxo de trabalho linear: os cozinheiros realizam as atividades de preparo nas bancadas laterais e a movimentação flui ordenadamente pelo meio, canalizando os pratos prontos em uma única direção até a bancada de expedição.
+    \item \textbf{Isolamento do Ponto Zero (Estoque):} A área de estoque de alimentos é isolada por grades, evidenciando um arranjo estritamente pensado para a segurança e o controle de inventário. Este ambiente atua como o ``ponto zero'' do fluxo de materiais, mantendo os insumos separados fisicamente da zona intensa de produção.
+    \item \textbf{Segregação de Fluxos (Cozinha vs. Salão):} A principal vantagem do layout adotado é a divisão física e clara entre a cozinha e o salão de atendimento, mediada exclusivamente pelo passa-pratos. Essa barreira impede que os garçons precisem circular dentro do ambiente de manipulação de alimentos. Tal isolamento de fluxo é vital: evita esbarrões, reduz consideravelmente o risco de acidentes de trabalho, previne a contaminação cruzada e garante um fluxo contínuo e seguro na saída dos pedidos.
+\end{itemize}
 
 % ============================================================
 % 8. CAP 8 – TECNOLOGIA DE PROCESSO
 % ============================================================
 \section{Cap.~8 – Tecnologia de Processo}
 
+A tecnologia de processo no Restaurante Tarumã caracteriza-se por um forte contraste entre a produção física (que é essencialmente artesanal) e o processamento de informações (que é amparado por sistemas de gestão interligados). Esse contraste reflete uma escolha estratégica da gerência: investir tecnologia onde ela agrega valor perceptível ao cliente e ao controle do negócio, e preservar o caráter manual onde a automação comprometeria a qualidade final do produto.
+
+\subsection{Tecnologia de Transformação Física}
+
+No que tange à transformação física dos materiais, o gerente informou que o processo da cozinha é \textbf{100\% manual}. O restaurante opta por não utilizar automação pesada na cocção, garantindo assim um nível de personalização avaliado em "10 de 10" para o cliente. As tecnologias físicas limitam-se aos equipamentos padrão de uma cozinha industrial (fogões industriais, chapas, fornos e utensílios de corte e preparo), sem a presença de maquinário automatizado para cocção ou montagem dos pratos.
+
+Essa decisão tem implicações diretas no projeto do trabalho: como não há automação física, a qualidade e a velocidade do processo dependem inteiramente da habilidade da mão de obra, o que reforça a importância dos procedimentos operacionais padronizados (como a gramatura de proteínas) discutidos no Capítulo 9. Em termos de \textit{trade-off} clássico da Administração da Produção, o Tarumã sacrifica ganhos de escala e padronização absoluta em troca de flexibilidade e personalização — uma escolha coerente com o perfil de cardápio extenso (20 pratos principais e cerca de 50 pratos diários).
+
+\subsection{Tecnologia de Processamento de Informações}
+
+Por outro lado, no processamento de informações e interação com o cliente, a tecnologia desempenha um papel central e estratégico. Diferentemente da cozinha, essa camada do negócio é altamente informatizada e integrada, funcionando como o sistema nervoso que coordena pedidos, avaliação de qualidade e controle financeiro.
+
+\subsubsection{Integração de Pedidos e Delivery}
+Há uma integração robusta das plataformas de venda \textit{on-line} (como o iFood) com o sistema de comandas da cozinha. Isso permite que a ordem chegue de forma instantânea e clara à linha de produção, contribuindo diretamente para o rigoroso tempo de ciclo da operação (8 minutos de preparo e, no máximo, 2 minutos para o cliente ser atendido no salão). Essa integração elimina etapas manuais de transcrição de pedidos, reduzindo a margem de erro e o tempo morto entre o pedido do cliente e o início do preparo — fator crítico em um ambiente de alta demanda e tempo de ciclo apertado.
+
+\subsubsection{Interação e Avaliação}
+A utilização de um \textbf{tablet de avaliação do estabelecimento} atua como uma tecnologia de monitoramento da qualidade percebida pelo cliente, permitindo a coleta de dados e \textit{feedbacks} em tempo real. Esse mecanismo funciona como um canal de controle de qualidade contínuo, possibilitando que a gerência identifique rapidamente quedas no nível de satisfação e tome ações corretivas antes que o problema se torne recorrente ou afete a reputação do restaurante nas plataformas de delivery.
+
+\subsubsection{Gestão Financeira e de Estoque}
+O restaurante conta com uma empresa de contabilidade parceira que utiliza sistemas de informação para analisar entradas, saídas e fluxo de caixa. Essa tecnologia analítica é vital para o controle de compras (que ocorre semanalmente) e garante que o Custo das Mercadorias Vendidas (CMV) não ultrapasse o teto estabelecido de 40\% sobre a venda, evitando que a empresa opere com margens negativas. O acompanhamento sistemático desse indicador também permite à gerência reagir rapidamente a variações no preço de insumos, ajustando o planejamento de compras antes que o CMV se aproxime do limite crítico.
+
 % ============================================================
 % 9. CAP 9 – PESSOAS NA PRODUÇÃO
 % ============================================================
 \section{Cap.~9 – Pessoas na Produção}
+
+A gestão de pessoas e o projeto do trabalho são fundamentais para o Restaurante Tarumã, especialmente considerando a natureza manual de sua cozinha e o alto grau de personalização exigido pelos consumidores (que dispõem de um cardápio de 20 pratos principais e cerca de 50 pratos diários no total). Como a tecnologia física é deliberadamente limitada (vide Capítulo 8), o desempenho operacional do restaurante depende quase exclusivamente da organização, capacitação e sincronia da equipe.
+
+\subsection{Divisão do Trabalho e Projeto de Tarefas}
+
+O restaurante conta com uma equipe robusta de \textbf{18 funcionários na cozinha, que são divididos estrategicamente em 9 praças} (estações de trabalho). Essa organização celular permite que as tarefas sejam altamente especializadas, reduzindo o tempo de deslocamento entre etapas do preparo e favorecendo o domínio técnico de cada colaborador sobre sua função específica.
+
+Além disso, há procedimentos operacionais bem definidos que guiam o trabalho humano: as proteínas são estritamente "gramatizadas" (pesadas em porções exatas) para padronizar custos, enquanto outros insumos são refogados no alho. Esses procedimentos cumprem uma função dupla: por um lado, padronizam o produto final mesmo em um processo manual; por outro, funcionam como mecanismo de controle de custos, já que a gramatura exata impede desperdícios e mantém o CMV dentro do teto estabelecido de 40\%.
+
+\subsection{Gestão de Escalas e Capacidade}
+
+O estabelecimento possui um horário de funcionamento extenso, abrindo às 11h e se estendendo até o horário de \textit{happy hour} e jantar. Como o maior pico de clientes se concentra entre \textbf{12h e 14h}, a gestão de escalas é vital. É necessário garantir a força de trabalho máxima nesse período crítico para absorver a demanda do salão e do delivery, evitando a exaustão física dos colaboradores e mantendo a qualidade do atendimento.
+
+Esse dimensionamento de capacidade ilustra um desafio clássico de operações de serviço com alta variabilidade de demanda ao longo do dia: a equipe precisa estar dimensionada para o pico (12h–14h), mas isso gera ociosidade relativa em horários de menor movimento. A solução encontrada pelo Tarumã — concentrar a força de trabalho no horário de pico e manter uma escala mais flexível fora dele — é uma forma de equilibrar custo de mão de obra e nível de serviço.
+
+\subsection{Habilidades e Sincronia de Equipe}
+
+Para que um prato complexo como a parmegiana seja produzido em apenas 8 minutos, a equipe necessita de alto nível de destreza e sincronia. O trabalho de preparo prévio (\textit{mise en place}) é essencial; a equipe adianta as etapas mais demoradas do processo (como o preparo do molho), permitindo que a finalização atenda à promessa de rapidez exigida pelo cliente.
+
+Esse uso intensivo do \textit{mise en place} pode ser entendido como uma estratégia de desacoplamento entre as etapas de maior tempo de processamento (preparo de bases e molhos) e as etapas de menor tempo (finalização e montagem do prato). Ao antecipar o trabalho que não depende diretamente do pedido do cliente, o restaurante consegue manter um tempo de ciclo curto mesmo operando com processo 100\% manual, demonstrando que ganhos de eficiência não dependem exclusivamente de automação física, mas também do projeto inteligente do fluxo de trabalho e da capacitação da equipe.
 
 % ============================================================
 % 10. CAP 10 – PLANEJAMENTO E CONTROLE
 % ============================================================
 \section{Cap.10 – Planejamento e Controle}
 
-O planejamento e controle consistem na conciliação contínua entre as demandas do mercado e a habilidade dos recursos da operação para entregá-las. No caso prático em análise, essa dinâmica fica evidente no desafio de equilibrar um alto volume de produção mensal (1.500 parmegianas) com uma considerável variedade de cardápio (20 pratos com alta flexibilidade de personalização). Essa matriz específica de volume e variedade afeta diretamente o horizonte de planejamento e o rigor do controle operacional, exigindo decisões de sequenciamento detalhadas em uma cozinha de processos puramente manuais, cuja capacidade depende totalmente de um carregamento preciso na programação dos padrões de trabalho de seus 18 funcionários em dois turnos.
+O planejamento e controle consistem na conciliação contínua entre as demandas do mercado e a habilidade dos recursos da operação para entregá-las. 
 
-Para otimizar o tempo de espera do cliente, a operação busca melhorar sua razão P:D, que compara o tempo de atravessamento produtivo (P) com o tempo de demanda ou espera do cliente (D). O restaurante reduz seu tempo interno ao manter proteínas com gramatura pré-porcionada, aproximando-se de uma operação de "criação parcial e entrega sob encomenda" que permite despachar o prato principal em cerca de 10 minutos. Ademais, por estar sujeito à demanda independente — na qual as requisições dos clientes são aleatórias e sem visibilidade antecipada firme —, o restaurante foca seu controle de suprimentos em estoques semanais ajustados por relatórios de parceiros, tomando decisões preventivas para evitar faltas ou excessos de insumos.
+\subsection{Matriz Volume-Variedade e Alocação de Capacidade}
+No caso prático em análise, essa dinâmica fica evidente no desafio de equilibrar um alto volume de produção mensal (aproximadamente 1.500 parmegianas de carne) com uma considerável variedade de cardápio (20 pratos com alta flexibilidade de personalização). Essa matriz específica de volume e variedade afeta diretamente o horizonte de planejamento e o rigor do controle operacional, exigindo decisões de sequenciamento detalhadas em uma cozinha de processos puramente manuais, cuja capacidade depende totalmente de um carregamento preciso na programação dos padrões de trabalho de seus 18 funcionários (divididos em turnos de 9 no diurno e 9 no noturno).
 
-Por fim, para gerenciar as flutuações, especialmente nos horários de pico (12h às 14h), a operação adota intervenções focadas no fluxo de clientes. A política de reserva de mesa atua como uma estratégia de carregamento finito, estipulando um limite para não sobrecarregar a capacidade produtiva da cozinha.
+\subsection{Razão P:D e Gestão de Demanda Independente}
+Para otimizar o tempo de espera do cliente, a operação busca melhorar sua razão P:D, que compara o tempo de atravessamento produtivo (P) com o tempo de demanda ou espera do cliente (D). O restaurante reduz seu tempo interno ao manter os bifes de carne com gramatura pré-porcionada, aproximando-se de uma operação de "criação parcial e entrega sob encomenda" que permite confeccionar a parmegiana de carne em cerca de 8 minutos, somando-se 2 minutos adicionais em que o prato fica parado antes de ser servido (totalizando 10 minutos de preparo). Ademais, por estar sujeito à demanda independente — na qual as requisições dos clientes são aleatórias e sem visibilidade antecipada firme —, o restaurante foca seu controle de suprimentos em estoques semanais ajustados por relatórios de parceiros, tomando decisões preventivas para evitar faltas ou excessos de insumos.
 
-
+\subsection{Gerenciamento de Pico e Carregamento Finito}
+Por fim, para gerenciar as flutuações, especialmente nos horários de pico (12h às 14h), a operação adota intervenções focadas no fluxo de clientes. A política de reserva de mesa atua como uma estratégia de carregamento finito, estipulando um limite para não sobrecarregar a capacidade produtiva da cozinha na linha de montagem e fritura das parmegianas de carne.
 
 % ============================================================
 % 11. CAP 13 – GESTÃO DE ESTOQUE
 % ============================================================
 \section{Cap.13 – Gestão de Estoque}
-O capítulo aborda o dilema clássico da gestão de estoque: equilibrar os custos de manter materiais armazenados — que imobilizam capital de giro e impõem riscos de perda ou obsolescência — com a necessidade de conciliar suprimento e demanda. No contexto prático do restaurante, esse desafio é administrado por meio de uma revisão semanal do estoque de produtos. Essa periodicidade ajuda a minimizar o capital de giro empatado e os custos de estocagem física, ao mesmo tempo em que o estoque atua como reserva de segurança  contra as flutuações imprevisíveis da demanda nos horários de pico.
 
-As principais decisões operacionais envolvem definir quanto pedir (decisão de volume) e quando pedir (decisão de timing), buscando minimizar o esforço e os custos totais de reabastecimento. Para lidar com essa complexidade de forma eficiente, o restaurante adota uma estratégia de controle terceirizado, trabalhando em conjunto com uma empresa parceira externa especializada. Essa empresa processa as informações operacionais e emite relatórios analíticos regulares que indicam precisamente o que deve ou não ser adquirido em cada ciclo, atuando na prática como o sistema de informação de estoque da operação para guiar as decisões de ressuprimento.
+O capítulo aborda o dilema clássico da gestão de estoque: equilibrar os custos de manter materiais armazenados — que imobilizam capital de giro e impõem riscos de perda ou obsolescência — com a necessidade de conciliar suprimento e demanda.
 
-Por fim, o monitoramento contínuo é essencial para garantir o retorno financeiro e evitar perdas por deterioração, um risco crítico no setor de alimentos. A dinâmica com a empresa parceira fornece um mecanismo de intervenção direta: ela oferece feedback sobre o ganho real da operação e sobre a precificação dos fornecedores, indicando as opções mais competitivas do mercado. Além disso, regula o fluxo de entrada de insumos — sinalizando a interrupção de compras diante de acúmulos excessivos ou orientando adequação quando os níveis estão abaixo do necessário. Esse controle assegura estoques dimensionados de forma adequada, otimizando os custos globais de pedido e manutenção sem comprometer a capacidade do restaurante de entregar seus pratos.
+\subsection{Dilema de Estoque em Produtos Perecíveis}
+No contexto prático do restaurante, esse desafio é administrado por meio de uma revisão semanal do estoque de produtos. Essa periodicidade ajuda a minimizar o capital de giro empatado e os custos de estocagem física dos insumos perecíveis da parmegiana (como bifes de carne, queijo muçarela e molho), ao mesmo tempo em que o estoque atua como reserva de segurança contra as flutuações imprevisíveis da demanda nos horários de pico. A representação visual do comportamento e reposição deste inventário ao longo do tempo é ilustrada no gráfico dente de serra (Figura~\ref{fig:dente_serra}).
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagens/Grafico_dente_de_serra.png}
+    \caption{Gráfico dente de serra para múltiplos produtos (Fonte: Slack, Chambers e Johnston, 8ª ed.).}
+    \label{fig:dente_serra}
+\end{figure}
 
+\subsection{Decisões de Volume e Timing com Apoio Externo}
+As principais decisões operacionais envolvem definir quanto pedir (decisão de volume) e quando pedir (decisão de timing), buscando minimizar o esforço e os custos totais de reabastecimento. Para lidar com essa complexidade de forma eficiente, o restaurante adota uma estratégia de controle terceirizado, trabalhando em conjunto com uma empresa parceira externa especializada. Essa empresa processa as informações operacionais e emite relatórios analíticos regulares que indicam precisamente o que deve ou não ser adquirido em cada ciclo para a produção da parmegiana de carne, evitando o acúmulo desnecessário de farinha panko para empanamento ou a falta do queijo para o gratinamento, atuando na prática como o sistema de informação de estoque da operação para guiar as decisões de ressuprimento.
+
+\subsection{Monitoramento, Feedback Financeiro e Regulação do Fluxo}
+Por fim, o monitoramento contínuo é essencial para garantir o retorno financeiro e evitar perdas por deterioração, um risco crítico no setor de alimentos. A dinâmica com a empresa parceira fornece um mecanismo de intervenção direta: ela oferece feedback sobre o ganho real da operação e sobre a precificação dos fornecedores, indicando as opções mais competitivas do mercado para as compras dos ingredientes da parmegiana de carne. Além disso, regula o fluxo de entrada de insumos — sinalizando a interrupção de compras diante de acúmulos excessivos ou orientando adequação quando os níveis estão abaixo do necessário. Esse controle assegura estoques dimensionados de forma adequada, otimizando os custos globais de pedido e manutenção sem comprometer a capacidade do restaurante de entregar seus pratos.
 
 % ============================================================
 % 12. CAP 16 – MELHORAMENTO DA PRODUÇÃO
 % ============================================================
 \section{Cap. 16 – Melhoramento da Produção}
-O capítulo trata do melhoramento da produção como uma responsabilidade central da gestão de operações, estruturada em elementos, abordagens, técnicas e gestão do processo de melhoria. No restaurante, esse ciclo de melhoramento se manifesta de forma contínua e incremental — caracterizando uma filosofia próxima ao kaizen —, especialmente no processo de desenvolvimento de novos pratos. A introdução de um item ao cardápio passa por uma reunião estruturada entre proprietários, gerentes, cozinheiros e o chef, onde a melhor ideia é selecionada coletivamente. A transição do papel para a prática é liderada pela própria cozinha, o que reforça o elemento de "inclusão de todos" e o desenvolvimento de relacionamentos internos entre as partes da operação.
 
-A coleta e o uso de evidências também compõem o esforço de melhoramento do restaurante, alinhando-se ao elemento de solução de problemas baseada em evidência. O feedback dos clientes é obtido por dois canais — Google e tablets no próprio estabelecimento —, funcionando como instrumentos de monitoramento contínuo que permitem detectar desvios de qualidade e orientar intervenções rápidas no processo. Esse mecanismo aproxima a operação de um ciclo PDCA informal, no qual os resultados percebidos pelos clientes retroalimentam as decisões operacionais da equipe.
+O capítulo trata do melhoramento da produção como uma responsabilidade central da gestão de operações, estruturada em elementos, abordagens, técnicas e gestão do processo de melhoria. 
 
-Por fim, a gestão do melhoramento exige organização e vinculação à estratégia da operação. A adoção da gramatura pré-porcionada para proteínas exemplifica um melhoramento incremental que reduziu o tempo de confecção do prato principal para aproximadamente 10 minutos, impactando diretamente a experiência do cliente. Esse tipo de melhoria localizada, simples e de baixo custo, ilustra como técnicas analíticas relativamente simples — como a padronização de etapas do processo — podem gerar ganhos expressivos de desempenho sem a necessidade de mudanças radicais ou de ruptura.
+\subsection{Melhoramento Incremental e Abordagem Colaborativa}
+No restaurante, esse ciclo de melhoramento se manifesta de forma contínua e incremental — caracterizando uma filosofia próxima ao kaizen (Figura~\ref{fig:melhoramento_continuo}) —, especialmente no processo de desenvolvimento de novos pratos. A introdução de um item ao cardápio passa por uma reunião estruturada entre proprietários, gerentes, cozinheiros e o chef, onde a melhor ideia é selecionada coletivamente. A transição do papel para a prática é liderada pela própria cozinha, o que reforça o elemento de "inclusão de todos" e o desenvolvimento de relacionamentos internos entre as partes da operação ao testar a confecção e montagem de pratos como a parmegiana de carne.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imagens/Melhoramento_Contínuo.png}
+    \caption{Relação entre melhoramento contínuo (kaizen) e o tempo (Fonte: Slack, Chambers e Johnston, 8ª ed.).}
+    \label{fig:melhoramento_continuo}
+\end{figure}
+
+\subsection{Coleta de Evidências, Feedbacks e Ciclo PDCA}
+A coleta e o uso de evidências também compõem o esforço de melhoramento do restaurante, alinhando-se ao elemento de solução de problemas baseada em evidência. O feedback dos clientes é obtido por dois canais — Google e tablets no próprio estabelecimento —, funcionando como instrumentos de monitoramento contínuo que permitem detectar desvios de qualidade especificamente na parmegiana de carne (como textura do empanamento) e orientar intervenções rápidas no processo. Esse mecanismo aproxima a operação de um ciclo PDCA informal, no qual os resultados percebidos pelos clientes retroalimentam as decisões operacionais da equipe, conforme ilustrado no ciclo clássico de melhoramento (Figura~\ref{fig:pdca}).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{imagens/Ciclo_PDCA.png}
+    \caption{O Ciclo PDCA de melhoramento de processos (Fonte: Slack, Chambers e Johnston, 8ª ed.).}
+    \label{fig:pdca}
+\end{figure}
+
+\subsection{Vinculação à Estratégia e Padronização de Etapas}
+Por fim, a gestão do melhoramento exige organização e vinculação à estratégia da operação. A adoção da gramatura pré-porcionada para as proteínas da parmegiana de carne exemplifica um melhoramento incremental que reduziu o tempo de confecção do prato principal para aproximadamente 10 minutos, impactando diretamente a experiência do cliente. Esse tipo de melhoria localizada, simples e de baixo custo, ilustra como técnicas analíticas relativamente simples — como a padronização de etapas do processo (separação, empanamento com ovo e farinha panko, fritura, adição de molho e queijo, e gratinamento) — podem gerar ganhos expressivos de desempenho sem a necessidade de mudanças radicais ou de ruptura.
 
 
 % ============================================================
