@@ -329,12 +329,6 @@ O estabelecimento possui um horário de funcionamento extenso, abrindo às 11h e
 
 Esse dimensionamento de capacidade ilustra um desafio clássico de operações de serviço com alta variabilidade de demanda ao longo do dia: a equipe precisa estar dimensionada para o pico (12h–14h), mas isso gera ociosidade relativa em horários de menor movimento. A solução encontrada pelo Tarumã — concentrar a força de trabalho no horário de pico e manter uma escala mais flexível fora dele — é uma forma de equilibrar custo de mão de obra e nível de serviço.
 
-\subsection{Habilidades e Sincronia de Equipe}
-
-Para que um prato complexo como a parmegiana seja produzido em apenas 8 minutos, a equipe necessita de alto nível de destreza e sincronia. O trabalho de preparo prévio (\textit{mise en place}) é essencial; a equipe adianta as etapas mais demoradas do processo (como o preparo do molho), permitindo que a finalização atenda à promessa de rapidez exigida pelo cliente.
-
-Esse uso intensivo do \textit{mise en place} pode ser entendido como uma estratégia de desacoplamento entre as etapas de maior tempo de processamento (preparo de bases e molhos) e as etapas de menor tempo (finalização e montagem do prato). Ao antecipar o trabalho que não depende diretamente do pedido do cliente, o restaurante consegue manter um tempo de ciclo curto mesmo operando com processo 100\% manual, demonstrando que ganhos de eficiência não dependem exclusivamente de automação física, mas também do projeto inteligente do fluxo de trabalho e da capacitação da equipe.
-
 % ============================================================
 % 10. CAP 10 – PLANEJAMENTO E CONTROLE
 % ============================================================
@@ -347,9 +341,6 @@ No caso prático em análise, essa dinâmica fica evidente no desafio de equilib
 
 \subsection{Razão P:D e Gestão de Demanda Independente}
 Para otimizar o tempo de espera do cliente, a operação busca melhorar sua razão P:D, que compara o tempo de atravessamento produtivo (P) com o tempo de demanda ou espera do cliente (D). O restaurante reduz seu tempo interno ao manter os bifes de carne com gramatura pré-porcionada, aproximando-se de uma operação de "criação parcial e entrega sob encomenda" que permite confeccionar a parmegiana de carne em cerca de 8 minutos, somando-se 2 minutos adicionais em que o prato fica parado antes de ser servido (totalizando 10 minutos de preparo). Ademais, por estar sujeito à demanda independente — na qual as requisições dos clientes são aleatórias e sem visibilidade antecipada firme —, o restaurante foca seu controle de suprimentos em estoques semanais ajustados por relatórios de parceiros, tomando decisões preventivas para evitar faltas ou excessos de insumos.
-
-\subsection{Gerenciamento de Pico e Carregamento Finito}
-Por fim, para gerenciar as flutuações, especialmente nos horários de pico (12h às 14h), a operação adota intervenções focadas no fluxo de clientes. A política de reserva de mesa atua como uma estratégia de carregamento finito, estipulando um limite para não sobrecarregar a capacidade produtiva da cozinha na linha de montagem e fritura das parmegianas de carne.
 
 % ============================================================
 % 11. CAP 13 – GESTÃO DE ESTOQUE
@@ -415,6 +406,8 @@ A principal proposta de melhoria para o Restaurante e Bar Tarumã foca na mitiga
 Para solucionar essa questão, propõe-se a implementação de Procedimentos Operacionais Padrão (POPs) integrados a ferramentas de Gestão Visual diretamente nas estações de trabalho da cozinha. Na prática, isso se traduz na elaboração de Fichas Técnicas Operacionais afixadas no setor de montagem e cocção. Essas fichas não devem ser apenas textuais, mas sim painéis visuais que contenham fotos do prato ideal (padrão de saída), os tempos exatos estipulados para fritura e gratinação na salamandra, e as gramaturas rigorosas de cada componente.
 
 Adicionalmente, como apoio a essa padronização, sugere-se a introdução de técnicas de controle baseadas no princípio de Poka-Yoke (sistemas à prova de erros). Isso pode ser feito através da padronização dos utensílios de medição: adotar conchas específicas que comportem o volume exato de molho de tomate por prato e recipientes pré-medidos para a quantidade de queijo e batatas fritas. Ao transferir o controle de qualidade da "intuição" do cozinheiro para o sistema físico e visual, o restaurante reduzirá a variabilidade da produção. Essa ação melhorará o objetivo de desempenho de qualidade (sabor e apresentação consistentes) e protegerá o objetivo de custos, evitando o desperdício ou a variação na margem de lucro causada pelo superporcionamento involuntário.
+
+De forma prática e tangível, a aplicação conjunta de POPs e Poka-Yoke no Tarumã pode ser implementada através da criação de uma "Estação Padrão de Montagem" nas bancadas da cozinha. Por exemplo, a área de finalização da parmegiana teria um POP visual simplificado fixado à altura dos olhos, contendo um fluxograma de passos rápidos (ex.: 1. Acomodar proteína; 2. Acionar 1 dose de molho; 3. Despejar 1 medidor de queijo). O Poka-Yoke materializa-se nos próprios equipamentos: os recipientes medidores teriam marcas de limite bem visíveis (como linhas de cor vibrante) e os dispensadores de molho poderiam ser adaptados com válvulas de pressão (tipo \textit{pump}) que liberam o volume exato a cada acionamento. Assim, durante o pico de atendimento, o funcionário não precisa deduzir quantidades, eliminando os desvios de porcionamento por meio de restrições físicas e instruções imediatas.
 
 
 % ============================================================
